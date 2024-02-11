@@ -18,7 +18,7 @@ pipeline {
                 echo 'gkl in stage - Test'
                 sh 'pipenv run pytest --html=report.html'
                   echo 'gkl before publishing html'
-                  publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: false, reportDir: '', reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
+                  publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
                   echo 'gkl after publishing html'
             }
         }
