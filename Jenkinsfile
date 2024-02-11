@@ -25,7 +25,7 @@ pipeline {
                 sh 'python3 jobs/ops.py'
             }
         }
-      Post {
+      post {
             always {
                   echo 'gkl before publishing html'
                   publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: '', useWrapperFileDirectly: true])
