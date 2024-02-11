@@ -1,6 +1,6 @@
 pipeline {
-      agent {dockerfile {
-          args "-u jenkins"}
+      agent {
+            dockerfile
       }
     stages {
         stage('Checkout') {
