@@ -29,7 +29,7 @@ pipeline {
       post {
             always {
                   echo 'gkl before publishing html'
-                  publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'report.html', reportName: 'HTML Report', reportTitles: 'Gokul Test report', useWrapperFileDirectly: true])
+                  publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: false, reportDir: '', reportFiles: 'index.html', reportName: 'HTML Report', reportTitles: 'Gokul Test report', useWrapperFileDirectly: true])
                   echo 'gkl after publishing html'
             }
       }
