@@ -8,7 +8,6 @@ ops = "*"
 pytest = "*"
 
 [dev-packages]
-ops = "*"
 pytest = "*"
 pytest-cov = "*"
 pytest-pep8 = "*"
