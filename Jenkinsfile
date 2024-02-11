@@ -16,7 +16,14 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'gkl in stage - Test'
-                sh 'pipenv run pytest'
+                sh 'pipenv run pytest --html=report.html'
+
+                publishHTML target: [
+                allowMissing: false,
+                alwaysLinkToLastBuild: false,
+                keepAll: true,
+                reportFiles: 'report.html',
+                reportName: 'RCov Report'
             }
         }
         stage('Build') {

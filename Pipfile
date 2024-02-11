@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 ops = "*"
 pytest = "*"
+allure-pytest = "*"
+pytest-html = "*"
 
 [dev-packages]
 pytest = "*"
