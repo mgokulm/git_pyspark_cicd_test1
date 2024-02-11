@@ -16,6 +16,8 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'gkl in stage - Test'
+                echo $WORKSPACE
+                echo $PWD
                 sh 'pipenv run pytest'
             }
         }
