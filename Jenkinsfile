@@ -7,15 +7,22 @@ pipeline {
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '0a5b6915-ce53-42e9-b665-306117ce5d98', url: 'https://github.com/mgokulm/git_pyspark_cicd_test1.git']])
             }
         }
+        stage('Prepare') {
+            steps {
+                echo 'gkl in stage - Prepare'
+                sh 'pipenv install --dev'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'gkl in stage - Test'
+                sh 'pipenv run pytest'
+            }
+        }
         stage('Build') {
             steps {
                 echo 'gkl in stage - Build'
                 sh 'python3 jobs/ops.py'
-            }
-        }
-          stage('Test') {
-            steps {
-                echo 'gkl in stage - Test'
             }
         }
     }
