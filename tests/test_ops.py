@@ -4,12 +4,6 @@ import os
 import sys
 from jobs.ops import *
 
-
-# def __init__(self, main_module: str = 'jobs/ops.py'):
-#     self.__root_dir = str(Path(__file__).parent)
-#     self.main_module = os.path.join(self.__root_dir, main_module)
-#     super().__init__()
-
 def test_add():
     assert add(2,3) == 5
 
