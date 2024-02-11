@@ -25,6 +25,7 @@ pipeline {
                 sh 'python3 jobs/ops.py'
             }
         }
+    }
       post {
             always {
                   echo 'gkl before publishing html'
@@ -32,5 +33,4 @@ pipeline {
                   echo 'gkl after publishing html'
             }
       }
-    }
 }
