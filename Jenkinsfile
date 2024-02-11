@@ -13,5 +13,10 @@ pipeline {
                 sh 'python3 jobs/ops.py'
             }
         }
+      stage('Build') {
+            steps {
+                echo 'gkl in stage - Test'
+            }
+        }
     }
 }
