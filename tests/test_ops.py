@@ -1,5 +1,5 @@
-import os.path
-
+import os
+from pathlib import Path
 import pytest
 from jobs.ops import *
 import os
