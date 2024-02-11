@@ -16,7 +16,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'gkl in stage - Test'
-                sh 'pipenv run pytest --html=report.html --self-contained-html'
+                sh 'pipenv run pytest --html=report.html'
             }
         }
         stage('Build') {
