@@ -16,7 +16,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'gkl in stage - Test'
-                sh 'pipenv run pytest --html=report.html --capture=tee-sys'
+                sh 'pipenv run pytest --html=Sample_report.html'
             }
         }
         stage('Build') {
