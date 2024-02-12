@@ -8,11 +8,13 @@ ops = "*"
 pytest = "*"
 allure-pytest = "*"
 pytest-html = "*"
+pyspark = "*"
 
 [dev-packages]
 pytest = "*"
 pytest-cov = "*"
 pytest-pep8 = "*"
+pyspark = "*"
 
 [requires]
 python_version = "3.11"
